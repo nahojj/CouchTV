@@ -1,0 +1,17 @@
+<main class="content">
+	<section class="upcoming-movies">
+		<div class="movie-card col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="upcome in upComing | limitTo: 18">
+			<a ng-if="upcome.poster_path" href="#/movie/{{upcome.id}}">
+				<div class="card">
+					<div class="movie-item-hover">
+						<i class="fa fa-star"></i>
+						<span class="movie-rate">{{upcome.vote_average}}</span>
+					</div>
+
+					<img class="center-block" src="http://image.tmdb.org/t/p/w500{{upcome.poster_path}}" alt="{{upcome.title}}">
+				</div>
+			</a>
+		</div>
+		<div class="clearfix"></div>
+	</section>
+</main>

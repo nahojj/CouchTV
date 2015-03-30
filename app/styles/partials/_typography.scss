@@ -1,0 +1,56 @@
+html,body {
+	font-family: $main-font;
+}
+
+// Classic typographic scale: if default 16px total size scale would be:
+// 9px, 10px, 11px, 12px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px
+
+h1 {
+	font-size: 48px;
+	@include HeaderFont();
+}
+
+h2 {
+	font-size: 36px;
+	/* @include HeaderFont(); */
+}
+
+h3 {
+	font-size: 24px;
+	/* @include HeaderFont(); */
+}
+
+h4 {
+	font-size: 21px;
+	/* @include HeaderFont(); */
+}
+
+h5 {
+	font-size: 18px;
+	@include HeaderFont();
+}
+
+h6 {
+	font-size: 16px;
+	@include HeaderFont();
+}
+
+a {
+	color: $color_02;
+	@include TransitionEaseinOut();
+
+	&:hover,
+	&:focus {
+		color: $color_01;
+		text-decoration: none;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.logo	h3 {
+	color: $color_02;
+	font-weight: 700;
+}

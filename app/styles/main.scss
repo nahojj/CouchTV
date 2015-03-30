@@ -1,0 +1,19 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// Partials
+@import "partials/_varibles";
+@import "partials/_mixin";
+@import "partials/typography";
+@import "partials/_header";
+@import "partials/_layout";
+@import "partials/_quiries";
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}

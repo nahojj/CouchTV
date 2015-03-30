@@ -1,0 +1,93 @@
+#header {
+	width: 250px;
+	height: 100%;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: $color_01;
+
+	.logo {
+		width: 100%;
+		position: relative;
+		z-index: 1000;
+
+		a {
+			text-decoration: none;
+
+			h3 {
+				margin: 10px 0 0 0;
+			}
+
+			&:hover,
+			&:focus,
+			&:visited {
+				color: $color_02;
+			}
+		}
+
+		p {
+			color: $color_02;
+			font-size: 14px;
+			font-weight: 300;
+		}
+	}
+}
+
+nav#mainMenu {
+	width: 100%;
+	margin-top: 15px;
+	padding: 0 20px;
+	display: block;
+
+	ul.navigation {
+		padding: 0;
+
+		list-style: none;
+
+		li {
+			display: block;
+			margin: 0 0 5px 0;
+
+			a {
+				width: 100%;
+				display: block;
+				padding: 8px 10px;
+				color: $color_11;
+				border: 1px solid $color_01;
+				@include TransitionEaseinOut();
+
+				i {
+					margin-right: 5px;
+				}
+
+				&:hover {
+					color: $color_02;
+					background-color: #202125;
+					border: 1px solid #202022;
+					@include borderRadius100();
+					text-decoration: none;
+				}
+			}
+
+			.active {
+				color: $color_02;
+				background-color: #202125;
+				border: 1px solid #202022;
+				@include borderRadius100();
+				text-decoration: none;
+			}
+		}
+
+		li.menu-border {
+			margin: 10px 0;
+			border-bottom: 2px solid $color_11;
+			border-radius: 3px;
+		}
+
+		li.search:hover {
+			background-color: $color_11;
+		}
+	}
+}

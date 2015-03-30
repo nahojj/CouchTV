@@ -1,0 +1,35 @@
+<main class="content">
+  <div class="searchField">
+    <input type="search" id="search" name="search" placeholder="Search movie here..." ng-model="searchField">
+  </div>
+
+  <div id="searchResult" ng-show="searchField">
+    <h2>Search Result for: {{searchField}}</h2>
+    <div class="movie-card col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="movie in movies | limitTo: 10">
+      <a ng-if="movie.poster_path" href="#/movie/{{movie.id}}">
+        <div class="card">
+          <div class="movie-item-hover">
+            <i class="fa fa-star"></i>
+            <span class="movie-rate">{{movie.vote_average}}</span>
+          </div>
+          <img ng-src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="{{movie.title}}">
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <section id="discover_movie">
+    <div class="movie-card col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="the_discover in the_discoveries | limitTo: 30">
+      <a ng-if="the_discover.poster_path" href="#/movie/{{the_discover.id}}">
+        <div class="card">
+          <div class="movie-item-hover">
+            <i class="fa fa-star"></i>
+            <span class="movie-rate">{{the_discover.vote_average}}</span>
+          </div>
+          <img class="center-block" src="http://image.tmdb.org/t/p/w500{{the_discover.poster_path}}" alt="{{the_discover.title}}">
+        </div>
+      </a>
+    </div>
+    <div class="clearfix"></div>
+  </section>
+</main>

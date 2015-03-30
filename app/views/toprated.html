@@ -1,0 +1,17 @@
+<main class="content">
+	<section class="upcoming-movies">
+		<div class="movie-card col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="top in topRated | limitTo: 18">
+			<a href="#/movie/{{top.id}}">
+				<div class="card">
+					<div class="movie-item-hover">
+						<i class="fa fa-star"></i>
+						<span class="movie-rate">{{top.vote_average}}</span>
+					</div>
+
+					<img class="center-block" src="http://image.tmdb.org/t/p/w500{{top.poster_path}}" alt="{{top.title}}">
+				</div>
+			</a>
+		</div>
+		<div class="clearfix"></div>
+	</section>
+</main>
