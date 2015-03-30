@@ -1,3 +1,3 @@
-#Simple AngularJS Application built on tmdb
+#Simple Movie Application - TMDB
 
-## johan.johanssoncouchtv.se
+##couchtv.johanjohansson.me
