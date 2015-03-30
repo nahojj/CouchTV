@@ -1,3 +1,3 @@
 #Simple AngularJS Application built on tmdb
 
-> johan.johanssoncouchtv
+## www.johan.johanssoncouchtv.se
